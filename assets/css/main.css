@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  --primary-color: #194f5b;
+  --primary2-color: #003b49;
+  --secondary-color: #e4e9ec;
+  --accent-color: #d08f5f;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent;
+    @apply transition-all;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+    @apply bg-opacity-70;
+  }

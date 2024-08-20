@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ITC Avant Garde';
+    src: url(../fonts/ITCAvantGardeStd-Bk.otf);
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde';
+    src: url(../fonts/ITCAvantGardeStd-Md.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde';
+    src: url(../fonts/ITCAvantGardeStd-Demi.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde';
+    src: url(../fonts/ITCAvantGardeStd-Bold.otf);
+    font-weight: 700;
+}
+
