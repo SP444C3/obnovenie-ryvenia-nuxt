@@ -1,10 +1,10 @@
 module.exports = {
   theme: {
     fontFamily: {
-      body: ["ITC Avant Garde", "sans"],
-      sans: ["ITC Avant Garde", "sans"],
-      serif: ["ITC Avant Garde", "sans"],
-      display: ["ITC Avant Garde", "sans"],
+      body: ["Manrope", "sans"],
+      sans: ["Manrope", "sans"],
+      serif: ["Manrope", "sans"],
+      display: ["Manrope", "sans"],
     },
     extend: {
       colors: {
@@ -12,6 +12,7 @@ module.exports = {
         primary2: "var(--primary2-color)",
         secondary: "var(--secondary-color)",
         accent: "var(--accent-color)",
+        borderColor: "var(--border-color)",
       },
       spacing: {
         "100p": "100px",

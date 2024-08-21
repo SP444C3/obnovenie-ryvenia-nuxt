@@ -5,4 +5,4 @@ const userSchema = new mongoose.Schema({
     token: String
 });
 
-export default mongoose.model('Obnovenie', userSchema);
+export default mongoose.model('ObnovenieRecord', userSchema);
