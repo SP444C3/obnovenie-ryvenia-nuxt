@@ -54,5 +54,6 @@ module.exports = {
         "7vw": "7vw",
       },
     },
+    plugins: [require('tailwindcss-primeui')]
   },
 };
