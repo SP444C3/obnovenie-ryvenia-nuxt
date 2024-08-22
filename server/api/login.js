@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken';
+import { defineEventHandler, setCookie } from 'h3'
 
 export default defineEventHandler( (event) => {
     const { password: userPassword } = getQuery(event);
@@ -6,6 +7,7 @@ export default defineEventHandler( (event) => {
         return {error: 'Unauthorized, token invalid'}
     } else {
         const token = jwt.sign({ user: 'admin' }, useRuntimeConfig().AUTH_SECRET, { expiresIn: '1d' });
-        return { token };
+        setCookie(event, 'token', token, { maxAge: 60*60*24*7, secure: true, httpOnly: true });
+        return { verified: true };
     }
 })

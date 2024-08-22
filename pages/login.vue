@@ -12,23 +12,24 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: 'loginpage'
+})
 
 const password = ref('')
 const error = ref(null)
-const token = useCookie('token');
+const jwtCookie = useCookie('token', { maxAge: 60 * 60 * 24 * 30, secure: true });
 
 async function login() {
-  const { token, error: apiError } = await $fetch('/api/login', {
+  
+  const { verified, error: apiError } = await $fetch('/api/login', {
     query: { password: password.value },
   })
-
   error.value = apiError
 
-  if (token) {
-    useCookie('token').value = token
+  if (verified) {
     navigateTo('/manage')
   }
 }
-
 
 </script>
