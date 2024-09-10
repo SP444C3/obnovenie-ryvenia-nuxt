@@ -1,14 +1,12 @@
-import Obnovenie from '../models/Obnovenie';
+import Obnovenie from "../models/Obnovenie";
+import { verifyToken } from "#imports";
 
 export default defineEventHandler(async (event) => {
+  if (!verifyToken(event)) {
+    setResponseStatus(event, 401);
+    return { error: 'Unauthorized' }
+  }
 
-    /* const { adminToken } = getQuery(event);
-    if (adminToken !== useRuntimeConfig().MANAGE_TOKEN) {
-        setResponseStatus(event, 401, 'Unauthorized');
-        return {error: 'Unauthorized, token invalid or missing'};
-    } */
-    
-    const obnovenie = await Obnovenie.find();
-    return obnovenie;
-    
+  const obnovenie = await Obnovenie.find();
+  return obnovenie;
 });
