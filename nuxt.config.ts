@@ -2,11 +2,19 @@ import Aura from "@primevue/themes/aura";
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-mongoose", "@primevue/nuxt-module"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-mongoose",
+    "@primevue/nuxt-module",
+    "@nuxt/icon"
+  ],
   runtimeConfig: {
     MONGO_URI: process.env.MONGODB_URI,
     MANAGE_TOKEN: process.env.MANAGE_TOKEN,
     AUTH_SECRET: process.env.AUTH_SECRET,
+    public: {
+      BASE_URL: process.env.BASE_URL
+    }
   },
   devServer: {
     https: {

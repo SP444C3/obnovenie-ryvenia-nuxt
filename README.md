@@ -19,6 +19,13 @@ yarn install
 # bun
 bun install
 ```
+## env variables
+
+The following environment variables must be set:
+- MONGODB_URI (database access)
+- MANAGE_TOKEN (secure, serves as password for backend access)
+- AUTH_SECRET (secure, jwt secret)
+- BASE_URL
 
 ## Development Server
 
