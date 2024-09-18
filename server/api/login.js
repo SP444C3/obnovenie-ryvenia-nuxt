@@ -2,8 +2,8 @@ import jwt from "jsonwebtoken";
 import { defineEventHandler, setCookie } from "h3";
 
 export default defineEventHandler((event) => {
-  const { password: userPassword } = getQuery(event);
-  if (userPassword !== useRuntimeConfig().MANAGE_TOKEN) {
+  const { password: providedPassword } = getQuery(event);
+  if (providedPassword !== useRuntimeConfig().MANAGE_TOKEN) {
     return { error: "Nesprávne heslo" };
   } else {
     const token = jwt.sign({ user: "admin" }, useRuntimeConfig().AUTH_SECRET, {

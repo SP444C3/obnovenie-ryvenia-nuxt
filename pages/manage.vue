@@ -1,7 +1,6 @@
 <template>
-  <main class="flex flex-col min-h-screen w-screen justify-center items-center">
     <ul class="flex flex-col bg-[#ffffff05] rounded-2xl py-2">
-      <li class="grid grid-cols-[4fr_4fr_1fr] font-black px-4 py-1">
+      <li class="grid grid-cols-[4fr_10rem_1fr] font-black px-4 py-1">
         <span>Meno klienta</span>
         <span>Prístup</span>
         <span>Akcie</span>
@@ -20,7 +19,6 @@
         </div>
       </div>
     </Popover>
-  </main>
 </template>
 
 <script setup>
@@ -32,7 +30,6 @@ const addClientName = ref('')
 const addPopover = ref(null)
 
 const togglePopover = (event) => {
-      // Show or hide the overlay panel
       addPopover.value.toggle(event);
 };
 

@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  --primary-color: #194f5b;
+  --primary-color: #18181A;
   --primary2-color: #003b49;
   --secondary-color: #e4e9ec;
   --accent-color: #d08f5f;
@@ -17,11 +17,11 @@
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-accent;
+    @apply bg-primary;
     @apply transition-all;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accent;
+    @apply bg-primary;
     @apply bg-opacity-70;
   }
