@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full min-h-screen flex flex-col justify-center items-center px-16 pt-16 overflow-x-hidden bg-gradient">
+  <div class="w-full min-h-screen flex flex-col justify-center items-center lg:px-16 lg:pt-16 overflow-x-hidden bg-gradient">
     <main
-      class="flex flex-col min-h-screen w-full justify-top items-center bg-primary drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+      class="flex flex-col min-h-screen w-full justify-top items-center bg-primary drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] p-4">
       <TopHeader />
       <slot />
     </main>
