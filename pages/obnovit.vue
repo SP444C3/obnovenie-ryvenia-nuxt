@@ -1,7 +1,16 @@
 <template>
   <div v-if="!error" class="flex flex-col justify-center items-center bg-primary">
     <div class="flex flex-col gap-8 justify-center items-center">
+    <div class="flex flex-col gap-8 justify-center items-center">
       <h1 class="text-3xl font-bold">Je na čase obnoviť Váš web!</h1>
+      <p class="text-zinc-400 font-thin text-center max-w-700p text-balance">Ubehol už rok od dokončenia vášho webu a
+        preto je nutné obnoviť hosting a vašu doménu. Dúfame, že sa vášmu
+        podnikaniu a úsiliam darí, a že budeme spolupracovať aj v budúcnosti. Každá stránka potrebuje starostlivosť a
+        aktualizácie aby ostala bezpečná a tak sa nestala ľahkým terčom útočníkov.</p>
+      <div class="border border-primary2 p-4 flex flex-col justify-center items-center gap-4 rounded-2xl">
+        <span class="font-thin text-primary2">Vaša webová adresa:</span>
+        <span class="text-2xl">{{ item.name }}</span>
+      </div>
       <p class="text-zinc-400 font-thin text-center max-w-700p text-balance">Ubehol už rok od dokončenia vášho webu a
         preto je nutné obnoviť hosting a vašu doménu. Dúfame, že sa vášmu
         podnikaniu a úsiliam darí, a že budeme spolupracovať aj v budúcnosti. Každá stránka potrebuje starostlivosť a
@@ -174,7 +183,9 @@ const { data: item, error } = await useFetch('/api/getRecord', {
 })
 
 
+
 onMounted(() => {
+
 
 })
 
