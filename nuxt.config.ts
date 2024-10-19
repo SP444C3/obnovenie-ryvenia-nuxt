@@ -1,4 +1,22 @@
 import Aura from "@primevue/themes/aura";
+import { definePreset } from "@primevue/themes";
+
+const MyPreset = definePreset(Aura, {
+  semantic: {
+    primary: {
+      50: "#ffffff",
+      100: "#ffffff",
+      200: "#ffffff",
+      300: "#ffffff",
+      400: "#ffffff",
+      500: "#ffffff",
+      600: "#ffffff",
+      700: "#ffffff",
+      800: "#ffffff",
+      900: "#ffffff",
+      950: "#ffffff",
+    },
+}})
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
@@ -27,7 +45,7 @@ export default defineNuxtConfig({
   primevue: {
     options: {
       theme: {
-        preset: Aura,
+        preset: MyPreset,
         options: {
           cssLayer: {
             name: "primevue",
