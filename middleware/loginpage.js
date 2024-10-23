@@ -14,7 +14,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
 
 async function verifyUser(token) {
 
-  const res = await $fetch("/api/verifyUser", {
+  const res = await $fetch("/api/verifyAdminUser", {
     query: { token: token },
   })
 

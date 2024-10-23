@@ -7,7 +7,7 @@ export default defineNuxtRouteMiddleware(async () => {
     return navigateTo("/login");
   }
 
-  const result = await verifyUser(toVerify);
+  const result = await verifyAdminUser(toVerify);
 
   if (!result) {
     return navigateTo("/login");
@@ -16,8 +16,8 @@ export default defineNuxtRouteMiddleware(async () => {
   return;
 });
 
-async function verifyUser(token) {
-  const res = await $fetch("/api/verifyUser", {
+async function verifyAdminUser(token) {
+  const res = await $fetch("/api/verifyAdminUser", {
     query: { token: token },
   });
 
