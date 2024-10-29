@@ -13,8 +13,13 @@ export default defineEventHandler(async (event) => {
     return { error: "Bad request" };
   }
 
-  const obnovenie = new Obnovenie({ name: name, token: generateToken() });
+  const obnovenie = new Obnovenie({
+    name: name,
+    token: generateToken(),
+    responded: false,
+    options: { plan: "", period: "", remember: false },
+  });
   const result = await obnovenie.save();
-  
+
   return result;
 });

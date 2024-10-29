@@ -215,12 +215,12 @@ async function submitResponse() {
   }
 
   await $fetch('/api/recordOptions', {
-    headers: { 'Authorization': `Bearer ${{id: id, token: token}}` },
+    headers: { 'Authorization': `Bearer ${JSON.stringify({id: id, token: token})}` },
     body: userOptions.value,
     method: 'POST',
     credentials: 'include'
   }).then(() => {
-    location.reload()
+    //location.reload()
   })
 
 }

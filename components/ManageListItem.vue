@@ -1,6 +1,7 @@
 <template>
   <li
     class="grid grid-cols-[4fr_10rem_1fr] font-thin text-zinc-400 py-1 px-4 hover:text-white hover:bg-zinc-800 transition-all duration-300 items-center">
+    <span v-if="item.responded" icon="uil:info-circle"></span>
     <span class="px-2">{{ item.name }}</span><span class="px-2 truncate" v-tooltip.top="{
       value: item.token,
       autoHide: false
@@ -21,7 +22,7 @@ const props = defineProps({
 })
 
 onMounted(() => {
-
+console.log(props.item)
 })
 
 const copyIcon = ref('uil:copy')
