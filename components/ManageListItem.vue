@@ -36,10 +36,6 @@ const props = defineProps({
 })
 const recordInfoPopover = ref(null)
 
-onMounted(() => {
-  console.log(props.item)
-})
-
 const copyIcon = ref('uil:copy')
 
 watchEffect(() => {

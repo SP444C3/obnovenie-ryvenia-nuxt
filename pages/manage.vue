@@ -7,7 +7,7 @@
       <span>Prístup</span>
       <span>Akcie</span>
     </li>
-    <div v-if="items.length">
+    <div v-if="items?.length">
       <ManageListItem v-for="item in items" :key="item.id" :item="item" />
     </div>
     <span v-else class="text-zinc-400 font-thin px-4 py-1 text-center">Klikni na "+" pre pridanie záznamu</span>
