@@ -17,6 +17,11 @@ export default defineEventHandler(async (event) => {
   })
 
   item.options = userInput;
+
+if (item.responded) {
+  return { error: "Response already sent" }
+}
+
   item.responded = true
 
   return await Obnovenie.findOneAndUpdate({ _id: headers.id }, item, {

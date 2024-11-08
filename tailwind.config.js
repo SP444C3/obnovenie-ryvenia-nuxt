@@ -1,4 +1,6 @@
-module.exports = {
+import primeui from'tailwindcss-primeui'
+
+export default  {
   theme: {
     fontFamily: {
       body: ["Manrope", "sans"],
@@ -54,6 +56,6 @@ module.exports = {
         "7vw": "7vw",
       },
     },
-    plugins: [require('tailwindcss-primeui')]
+    plugins: [primeui]
   },
 };

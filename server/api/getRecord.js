@@ -3,6 +3,8 @@ import Obnovenie from "../models/Obnovenie";
 export default defineEventHandler(async (event) => {
   const { token, id } = getQuery(event);
 
+  let obnovenie
+
   try {
     if (!token || !id) {
       throw createError({
@@ -11,7 +13,6 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    let obnovenie
 
     try{
     obnovenie = await Obnovenie.findById(id);

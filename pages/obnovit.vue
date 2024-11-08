@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!error" class="flex flex-col justify-center items-center bg-primary">
+  <div v-if="!error && !item.responded" class="flex flex-col justify-center items-center bg-primary">
     <div class="flex flex-col gap-8 justify-center items-center">
       <div class="flex flex-col gap-8 justify-center items-center">
         <h1 class="text-3xl font-bold">Je na čase obnoviť Váš web!</h1>
@@ -152,10 +152,11 @@
 
     </div>
   </div>
-  <div v-else>
+  <div v-else-if="error">
     {{ error.statusCode }}
     {{ error.statusMessage }}
   </div>
+  <ThankYou v-else-if="item.responded" />
 </template>
 
 <script setup>
@@ -220,7 +221,7 @@ async function submitResponse() {
     method: 'POST',
     credentials: 'include'
   }).then(() => {
-    //location.reload()
+    location.reload()
   })
 
 }
