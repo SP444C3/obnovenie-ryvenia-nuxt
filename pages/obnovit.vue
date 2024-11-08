@@ -2,7 +2,7 @@
   <div v-if="!error && !item.responded" class="flex flex-col justify-center items-center bg-primary">
     <div class="flex flex-col gap-8 justify-center items-center">
       <div class="flex flex-col gap-8 justify-center items-center">
-        <h1 class="text-3xl font-bold">Je na čase obnoviť Váš web!</h1>
+        <h1 class="text-3xl font-bold text-center text-balance">Je na čase obnoviť Váš web!</h1>
         <p class="text-zinc-400 font-thin text-center max-w-700p text-balance">Ubehol už rok od dokončenia vášho webu a
           preto je nutné obnoviť hosting a vašu doménu. Dúfame, že sa vášmu
           podnikaniu a úsiliam darí, a že budeme spolupracovať aj v budúcnosti. Každá stránka potrebuje starostlivosť a
